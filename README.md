@@ -1,4 +1,8 @@
-# SOLO Base Template
-This is a basic repo template for SOLO developers.
+# PsychoPy Sample Tasks
+This repo contains PsychoPy sample tasks created/modified by SOLO.
 
-> If you are lost, you may need to be in the [develop branch](../../tree/develop). For more information about using GitHub, see the [SOLO GitHub User Guide](https://solo-fsw-projects.github.io/).
+To download this repo (and all samples in it), click on the green Code button and click Download ZIP.
+
+This repo contains the sample tasks below. See each folder for more information.
+
+No tasks yet..
