@@ -8,7 +8,7 @@ This repo contains the sample tasks below. See each folder for more information.
 
 
 
-\* \*\*titta package\*\*: A sample task uses the titta package to record data with Tobii Pro Lab (External Presenter Mode). See the folder for more info.
+* **titta package**: A sample task uses the titta package to record data with Tobii Pro Lab (External Presenter Mode). See the folder for more info.
 
 
 
