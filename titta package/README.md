@@ -1,11 +1,11 @@
 
 # Titta Package
 
-The titta package allows to use tobii eye trackers with python and can be used to integrate Tobii Pro Lab in Psychopy experiments. Note that Tobii does not work in every Python version, see [SOLO Research Wiki - Tobii and OpenSesame]
+The titta package allows to use tobii eye trackers with python and can be used to integrate Tobii Pro Lab in Psychopy experiments. Note that Tobii does not work in every Python version, see [SOLO Research Wiki - Tobii and OpenSesame](https://researchwiki.solo.universiteitleiden.nl/xwiki/wiki/researchwiki.solo.universiteitleiden.nl/view/Software/OpenSesame/Tobii%20and%20OpenSesame/)
 
 
 
-**builder_test_TPL.psyexp** is an example Psychopy builder task of how to use Titta with Tobii Pro Lab integration. It is an adapted from the example psychopy coder file which can be accessed here: https://github.com/marcus-nystrom/Titta. This page also contains more information about the titta package. Note that you also need to create an External Presenter project in Tobii  Pro Lab to record the data.
+**builder_test_TPL.psyexp** is an example Psychopy builder task of how to use Titta with Tobii Pro Lab integration. It is adapted from the example psychopy coder file which can be accessed here: https://github.com/marcus-nystrom/Titta. This page also contains more information about the titta package. Note that you also need to create an External Presenter project in Tobii  Pro Lab to record the data.
 
 
 
@@ -41,7 +41,24 @@ In the code component the media is uploaded and optionally AOIs can be added to 
 
 The recording in Tobii Pro Lab needs to be stopped at the end of the experiment, see the "stop_recording" routine. 
 
+>[!IMPORTANT]
+If Psychopy crashes or the experiment is exited before you reach the end, the connection to Tobii Pro Lab may not be properly closed. You might receive this error when trying to run the experiment the next time: `OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted: ('', 9036)`. To resolve this, you can restart your laptop or manually disable the connection. To do so, go to the Command prompt and identify what is holding the connection: 
+```python
+netstat -aon | findstr :9036
+```
+You will see a PID number on the right side, it could look something like this: 
 
+ `UDP    0.0.0.0:9036           *:*                                    10872`
+
+ Stop the offending process by entering the process ID: 
+ 
+ ```python
+taskkill /PID <PID> /F
+#in our example PID = 10872
+taskkill /PID 10872 /F
+```
+
+ 
 
 ## Tobii Pro Lab 
 
