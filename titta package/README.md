@@ -62,7 +62,7 @@ taskkill /PID 10872 /F
 
 ## Tobii Pro Lab 
 
-You need to create an external presenter project in Tobii Pro Lab by going to **Create new project - External Presenter - Create**. Make sure to keep the project open and on the `Record` tab before starting the experiment in OpenSesame. The External Presenter box will change the status to "Connected" once the experiment started and OpenSesame successfully connected to Tobii Pro Lab. After the recording is finished, you can view the recording in the `Analyze` tab. 
+You need to create an external presenter project in Tobii Pro Lab by going to **Create new project - External Presenter - Create**. Make sure to keep the project open and on the `Record` tab before starting the experiment in PsychoPy. The External Presenter box will change the status to "Connected" once the experiment started and PsychoPy successfully connected to Tobii Pro Lab. After the recording is finished, you can view the recording in the `Analyze` tab. 
 
 
 
