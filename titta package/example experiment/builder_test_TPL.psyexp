@@ -103,7 +103,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="tracker.calibrate(win)&amp;#10;win.flip()" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="import pandas as pd&amp;#10;&amp;#10;tracker.calibrate(win)&amp;#10;win.flip()&amp;#10;&amp;#10;# Save calibration/validation results to CSV (next to the experiment file)&amp;#10;cols = ['offset_left_eye (deg)', 'offset_right_eye (deg)',&amp;#10;        'RMS_S2S_left_eye (deg)', 'RMS_S2S_right_eye (deg)',&amp;#10;        'data_loss_left_eye (%)', 'data_loss_right_eye (%)',&amp;#10;        'SD_left_eye (deg)', 'SD_right_eye (deg)', 'calibration_used']&amp;#10;&amp;#10;cal_file = os.path.join(_thisDir, str(expInfo['participant']) + '_calibration.csv')&amp;#10;pd.DataFrame(tracker.calibration_history(), columns=cols).to_csv(cal_file, index=False)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
